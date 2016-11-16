@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_height="50dp"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:layout_width="50dp"
+            android:id="@+id/imageView2"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="276dp"
+            android:layout_height="match_parent"
+            android:text="UserName"
+            android:layout_weight="0.79"
+            android:gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="406dp"
+        app:srcCompat="@android:color/background_light"
+        android:id="@+id/imageView" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_margin="10dp">
+
+        <ImageView
+            app:srcCompat="@drawable/ic_heart"
+            android:id="@+id/imageView3"
+            android:layout_height="50dp"
+            android:layout_width="50dp" />
+
+        <ImageView
+            app:srcCompat="@drawable/ic_heart"
+            android:id="@+id/imageView4"
+            android:layout_height="50dp"
+            android:layout_width="50dp" />
+
+    </LinearLayout>
+</LinearLayout>
