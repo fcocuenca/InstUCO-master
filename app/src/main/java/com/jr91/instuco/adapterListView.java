@@ -5,7 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 /**
  * Created by Usuario on 16/11/16.
@@ -15,12 +18,14 @@ class adapterListView extends BaseAdapter {
 
     Context context;
     String[] data;
+    String[] urls;
     private static LayoutInflater inflater = null;
 
-    public adapterListView(Context context, String[] data) {
+    public adapterListView(Context context, String[] data, String[] urls) {
         // TODO Auto-generated constructor stub
         this.context = context;
         this.data = data;
+        this.urls = urls;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
@@ -51,6 +56,14 @@ class adapterListView extends BaseAdapter {
         }
         TextView text = (TextView) vi.findViewById(R.id.username);
         text.setText(data[position]);
+
+        ImageView imageUploaded = (ImageView) vi.findViewById(R.id.imageView);
+        Picasso.with(context).load(urls[position]).into(imageUploaded);
+
+        ImageView imageIcon = (ImageView) vi.findViewById(R.id.imageView2);
+        Picasso.with(context).load(urls[position]).into(imageIcon);
+
+
         return vi;
     }
 }
