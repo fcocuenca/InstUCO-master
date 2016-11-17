@@ -21,8 +21,7 @@ class adapterListView extends BaseAdapter {
         // TODO Auto-generated constructor stub
         this.context = context;
         this.data = data;
-        inflater = (LayoutInflater) context
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
@@ -50,8 +49,8 @@ class adapterListView extends BaseAdapter {
         if (vi == null) {
             vi = inflater.inflate(R.layout.rowlistview, null);
         }
-        TextView text = (TextView) vi.findViewById(R.id.text);
-        //text.setText(R.string.app_name);
+        TextView text = (TextView) vi.findViewById(R.id.username);
+        text.setText(data[position]);
         return vi;
     }
 }

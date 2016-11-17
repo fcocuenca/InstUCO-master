@@ -29,8 +29,8 @@ public class imageList extends AppCompatActivity {
         });
 
         ListView listview = (ListView) findViewById(R.id.imageListView);
-        listview.setAdapter(new adapterListView(this, new String[]{"data1",
-                "data2"}));
+        listview.setAdapter(new adapterListView(this, new String[]{"Jesus Rio",
+                "Miguel Lama", "Paco Cuenca", "Jose A. Albalat"}));
     }
 
     @Override
